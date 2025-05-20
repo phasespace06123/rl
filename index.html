@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Video on Button Click</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <video id="myVideo" controls>
+      <source src="sample.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <br>
+    <button id="playButton">Play Video</button>
+  </div>
+
+  <script>
+    document.getElementById("playButton").addEventListener("click", function () {
+      const video = document.getElementById("myVideo");
+      video.play();
+    });
+  </script>
+
+</body>
+</html>
